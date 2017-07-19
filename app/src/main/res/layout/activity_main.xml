@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tailoreddevelopmentgroup.laxstats.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/teams_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="US"
+            android:textSize="60dp"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THEM"
+            android:textSize="60dp"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_linear_layout"
+        android:layout_below="@id/teams_linear_layout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/us_minus_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/us_goal_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="60dp"
+                android:paddingRight="4dp"
+                android:paddingLeft="4dp"/>
+
+            <Button
+                android:id="@+id/us_plus_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:text="+"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/them_minus_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/them_goal_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="60dp"
+                android:paddingRight="4dp"
+                android:paddingLeft="4dp"/>
+
+            <Button
+                android:id="@+id/them_plus_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:text="+"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/faceoffs_won"
+        android:orientation="horizontal"
+        android:layout_below="@id/score_linear_layout"
+        android:paddingTop="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45dp"
+            android:text="Faceoffs:"
+            android:paddingRight="16dp"/>
+
+        <Button
+            android:id="@+id/minus_faceoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="-"
+            android:paddingRight="4dp"/>
+
+        <Button
+            android:id="@+id/plus_faceoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/faceoffs_won_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="45dp"
+            android:paddingLeft="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/completed_passes"
+        android:orientation="horizontal"
+        android:layout_below="@id/faceoffs_won"
+        android:paddingTop="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45dp"
+            android:text="Passes:"
+            android:paddingRight="16dp"/>
+
+        <Button
+            android:id="@+id/minus_passes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="-"
+            android:paddingRight="4dp"/>
+
+        <Button
+            android:id="@+id/plus_passes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/passes_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="45dp"
+            android:paddingLeft="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ground_balls"
+        android:orientation="horizontal"
+        android:layout_below="@id/completed_passes"
+        android:paddingTop="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45dp"
+            android:text="Ground Balls:"
+            android:paddingRight="16dp"/>
+
+        <Button
+            android:id="@+id/minus_gb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="-"
+            android:paddingRight="4dp"/>
+
+        <Button
+            android:id="@+id/plus_gb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/ground_balls_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="45dp"
+            android:paddingLeft="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shots"
+        android:orientation="horizontal"
+        android:layout_below="@id/ground_balls"
+        android:paddingTop="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45dp"
+            android:text="Shots:"
+            android:paddingRight="16dp"/>
+
+        <Button
+            android:id="@+id/minus_shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="-"
+            android:paddingRight="4dp"/>
+
+        <Button
+            android:id="@+id/plus_shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/shots_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="45dp"
+            android:paddingLeft="16dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
